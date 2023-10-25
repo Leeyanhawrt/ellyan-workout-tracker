@@ -5,7 +5,7 @@ import { Pool } from "pg";
 
 module.exports = (pool: Pool) => {
   /* GET all users */
-  router.get("/", async (res: Response) => {
+  router.get("/", async (req: Request, res: Response) => {
     res.status(200).send("Working");
   });
 

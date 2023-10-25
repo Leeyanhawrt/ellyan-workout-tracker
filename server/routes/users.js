@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 module.exports = (pool) => {
     /* GET all users */
-    router.get("/", (res) => __awaiter(void 0, void 0, void 0, function* () {
+    router.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(200).send("Working");
     }));
     return router;
