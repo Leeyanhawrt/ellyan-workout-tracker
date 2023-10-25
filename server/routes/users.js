@@ -17,7 +17,13 @@ const router = express_1.default.Router();
 module.exports = (pool) => {
     /* GET all users */
     router.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-        res.status(200).send("Working");
+        try {
+            const data = yield pool.query(`SELECT * FROM users`);
+            res.status(200).send(data);
+        }
+        catch (err) {
+            console.log(err);
+        }
     }));
     return router;
 };

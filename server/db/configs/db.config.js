@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // Database connections
 const pg_1 = require("pg");
+require("dotenv").config();
 const { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT } = process.env;
 let pool;
 if (process.env.DATABASE_URL) {
