@@ -1,10 +1,10 @@
 // // Express and Database Setup
-const express = require("express");
-const bodyParser = require("body-parser");
-const pool = require("./db/configs/db.config.js");
+import express from "express";
+import bodyParser from "body-parser";
+import pool from "./db/configs/db.config.js";
 require("dotenv").config();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.SERVER_PORT || 8080;
 
 const app = express();
 
@@ -13,11 +13,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Resource Routes
-const profileRoutes = require("./routes/profile");
+const profileRoutes = require("./routes/users");
 
 // Resource Mounting
-app.use("/profile", profileRoutes(pool));
+app.use("/user", profileRoutes(pool));
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
-
-console.log(process.env);

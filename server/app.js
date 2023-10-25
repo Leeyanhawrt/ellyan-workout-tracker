@@ -1,17 +1,20 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 // // Express and Database Setup
-const express = require("express");
-const bodyParser = require("body-parser");
-const pool = require("./db/configs/db.config.js");
+const express_1 = __importDefault(require("express"));
+const body_parser_1 = __importDefault(require("body-parser"));
+const db_config_js_1 = __importDefault(require("./db/configs/db.config.js"));
 require("dotenv").config();
-const PORT = process.env.PORT || 8080;
-const app = express();
+const PORT = process.env.SERVER_PORT || 8080;
+const app = (0, express_1.default)();
 // Middleware functions
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(body_parser_1.default.json());
+app.use(body_parser_1.default.urlencoded({ extended: false }));
 // Resource Routes
-const profileRoutes = require("./routes/profile");
+const profileRoutes = require("./routes/users");
 // Resource Mounting
-app.use("/profile", profileRoutes(pool));
+app.use("/user", profileRoutes(db_config_js_1.default));
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
-console.log(process.env);
