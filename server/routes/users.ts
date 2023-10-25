@@ -8,7 +8,7 @@ module.exports = (pool: Pool) => {
   router.get("/", async (req: Request, res: Response) => {
     try {
       const data = await pool.query(`SELECT * FROM users`);
-      res.status(200).send(data);
+      res.status(200).send(data.rows);
     } catch (err) {
       console.log(err);
     }

@@ -19,7 +19,7 @@ module.exports = (pool) => {
     router.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const data = yield pool.query(`SELECT * FROM users`);
-            res.status(200).send(data);
+            res.status(200).send(data.rows);
         }
         catch (err) {
             console.log(err);
