@@ -15,6 +15,7 @@ const HomePage = () => {
         autoPlay
         loop
         flipAnimation
+        cta_buttons
       />
     </section>
   );

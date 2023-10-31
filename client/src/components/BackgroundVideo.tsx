@@ -9,6 +9,7 @@ interface BackgroundVideoProps {
   header?: string;
   subheader?: string;
   flipAnimation?: boolean;
+  cta_buttons?: boolean;
 }
 
 const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
@@ -16,6 +17,7 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
   header,
   subheader,
   flipAnimation,
+  cta_buttons,
   ...configs
 }) => {
   let spanLetters;
@@ -33,10 +35,18 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
     });
   }
 
-  let backgroundText = (
+  const getStarted = (
+    <div id="get-started">
+      <button>Register</button>
+      <button>Log In</button>
+    </div>
+  );
+
+  const backgroundText = (
     <div className="header">
       {header && <h1>{spanLetters || header}</h1>}
       {subheader && <p>{subheader}</p>}
+      {cta_buttons && getStarted}
     </div>
   );
 
