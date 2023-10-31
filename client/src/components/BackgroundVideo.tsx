@@ -16,9 +16,24 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
   subheader,
   ...configs
 }) => {
+  let spanLetters;
+  if (header) {
+    const headerLetters = header.split("");
+    spanLetters = headerLetters.map((letter, i) => {
+      if (letter === " ") {
+        return <span key={i}>&nbsp;</span>;
+      }
+      return (
+        <span key={i} style={{ animationDelay: `calc(.2s * ${i + 1})` }}>
+          {letter}
+        </span>
+      );
+    });
+  }
+
   let backgroundText = (
     <div className="header">
-      {header && <h1>{header}</h1>}
+      {header && <h1>{spanLetters}</h1>}
       {subheader && <p>{subheader}</p>}
     </div>
   );

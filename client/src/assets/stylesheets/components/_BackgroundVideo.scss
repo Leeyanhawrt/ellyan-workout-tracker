@@ -31,5 +31,10 @@
     align-items: center;
     flex-direction: column;
     color: white;
+
+    span {
+      display: inline-block;
+      animation: 5.5s 0s infinite flip;
+    }
   }
 }
