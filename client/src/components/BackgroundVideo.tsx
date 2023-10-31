@@ -8,16 +8,18 @@ interface BackgroundVideoProps {
   loop?: boolean;
   header?: string;
   subheader?: string;
+  flipAnimation?: boolean;
 }
 
 const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
   video,
   header,
   subheader,
+  flipAnimation,
   ...configs
 }) => {
   let spanLetters;
-  if (header) {
+  if (header && flipAnimation) {
     const headerLetters = header.split("");
     spanLetters = headerLetters.map((letter, i) => {
       if (letter === " ") {
@@ -33,7 +35,7 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
 
   let backgroundText = (
     <div className="header">
-      {header && <h1>{spanLetters}</h1>}
+      {header && <h1>{spanLetters || header}</h1>}
       {subheader && <p>{subheader}</p>}
     </div>
   );

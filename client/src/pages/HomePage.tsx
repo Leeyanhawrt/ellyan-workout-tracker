@@ -3,7 +3,7 @@ import paddling_video from "../assets/videos/ndrc-paddling.mp4";
 
 const HomePage = () => {
   let headerText = "Ellyan Workout Tracker";
-  let subheaderText = "Tracking to the Next Level";
+  let subheaderText = "Take Workout Tracking to the Next Level";
 
   return (
     <section>
@@ -14,6 +14,7 @@ const HomePage = () => {
         muted
         autoPlay
         loop
+        flipAnimation
       />
     </section>
   );
