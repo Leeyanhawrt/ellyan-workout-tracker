@@ -1,4 +1,5 @@
 import BackgroundVideo from "../components/BackgroundVideo";
+import FeaturesList from "../components/FeatureList";
 import paddling_video from "../assets/videos/ndrc-paddling.mp4";
 import "../assets/stylesheets/pages/_p_home.scss";
 
@@ -25,6 +26,7 @@ const HomePage = () => {
           </span>
         </h2>
       </div>
+      <FeaturesList />
     </>
   );
 };
