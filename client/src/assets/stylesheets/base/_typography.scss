@@ -1,14 +1,44 @@
+@import "../abstracts/mixins";
+
 body {
   line-height: 1.7;
 }
 
-h1 {
-  font-size: 6rem;
+h1,
+h2 {
   font-family: "Amatic SC", sans-serif;
   font-weight: 700;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
 }
 
 p {
   font-family: "Urbanist", sans-serif;
   font-size: 2rem;
+}
+
+.caveat {
+  font-family: "Caveat", cursive;
+
+  &-400 {
+    font-weight: 400;
+  }
+
+  &-500 {
+    font-weight: 500;
+  }
+
+  &-600 {
+    font-weight: 600;
+  }
+
+  &-700 {
+    font-weight: 700;
+  }
 }

@@ -1,0 +1,11 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.app-features {
+  @include flexCenter;
+  flex-direction: column;
+
+  span {
+    color: $color-secondary;
+  }
+}
