@@ -1,23 +1,42 @@
 import FeatureItem from "./FeatureItem";
-import { GoGraph } from "react-icons/go";
+import { useTranslation } from "react-i18next";
+import { GoCalendar, GoGraph, GoRepo } from "react-icons/go";
+import "../assets/stylesheets/components/_FeatureList.scss";
 
 interface FeatureListProps {}
 
 const FeatureList: React.FC<FeatureListProps> = ({}) => {
+  const { t } = useTranslation("", { keyPrefix: "components.featureList" });
   const featuresData = [
     {
-      title: "Progress Graphs",
-      deatils:
-        "These graphs offer a dynamic representation of your fitness journey, and they can be displayed across various timelines, including weekly, monthly, and yearly intervals.",
+      title: t("featureOneTitle"),
+      details: t("featureOneDetails"),
       icon: <GoGraph />,
+    },
+    {
+      title: t("featureTwoTitle"),
+      details: t("featureTwoDetails"),
+      icon: <GoCalendar />,
+    },
+    {
+      title: t("featureThreeTitle"),
+      details: t("featureThreeDetails"),
+      icon: <GoRepo />,
     },
   ];
 
-  return (
-    <ul id="features-container">
-      <FeatureItem />
-    </ul>
-  );
+  const featureItems = featuresData.map((feature) => {
+    return (
+      <FeatureItem
+        key={feature.title}
+        title={feature.title}
+        details={feature.details}
+        icon={feature.icon}
+      />
+    );
+  });
+
+  return <ul id="features-container">{featureItems}</ul>;
 };
 
 export default FeatureList;

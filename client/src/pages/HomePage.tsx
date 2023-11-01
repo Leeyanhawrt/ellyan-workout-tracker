@@ -5,7 +5,7 @@ import "../assets/stylesheets/pages/_p_home.scss";
 import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
-  const { t } = useTranslation("", { keyPrefix: "homePage" });
+  const { t } = useTranslation("", { keyPrefix: "pages.home" });
 
   return (
     <>
@@ -19,12 +19,11 @@ const HomePage = () => {
         flipAnimation
         cta_buttons
       />
-      <div>
-        <h2 className="app-features">
-          <span className="caveat-700 caveat u-margin-top-medium">
-            Application Features
-          </span>
+      <div className="app-features u-margin-top-medium">
+        <h2>
+          <span className="caveat-700 caveat ">{t("appFeatures")}</span>
         </h2>
+        <p>{t("appFeatureP")}</p>
       </div>
       <FeaturesList />
     </>

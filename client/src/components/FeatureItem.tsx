@@ -1,12 +1,18 @@
-interface FeatureItemProps {}
+import "../assets/stylesheets/components/_FeatureItem.scss";
 
-const FeatureItem: React.FC<FeatureItemProps> = ({}) => {
+interface FeatureItemProps {
+  title: string;
+  details: string;
+  icon: React.ReactNode;
+}
+
+const FeatureItem: React.FC<FeatureItemProps> = ({ title, details, icon }) => {
   return (
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    <li className="feature-item">
+      <h4>{title}</h4>
+      <p>{details}</p>
+      <div className="icon-container">{icon}</div>
+    </li>
   );
 };
 

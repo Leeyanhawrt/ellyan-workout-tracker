@@ -1,6 +1,20 @@
 {
-  "homePage": {
-    "headerText": "Ellyan Workout Tracker",
-    "subheaderText": "Take Workout Tracking to the Next Level"
+  "pages": {
+    "home": {
+      "headerText": "Ellyan Workout Tracker",
+      "subheaderText": "Take Workout Tracking to the Next Level",
+      "appFeatures": "Application Features",
+      "appFeatureP": "This is how we help in optimizing the results you achieve at the gym"
+    }
+  },
+  "components": {
+    "featureList": {
+      "featureOneTitle": "Progress Graphs",
+      "featureOneDetails": "These graphs offer a dynamic representation of your fitness journey, and they can be displayed across various timelines, including weekly, monthly, and yearly intervals.",
+      "featureTwoTitle": "Workout Preview",
+      "featureTwoDetails": "View a comprehensive overview of your weekly workouts at a glance, with each day's focus and planned exercises laid out for you.",
+      "featureThreeTitle": "Exercise Recommendations",
+      "featureThreeDetails": "Enjoy the freedom to switch up your routine regularly. With a wide range of exercises at your fingertips"
+    }
   }
 }
