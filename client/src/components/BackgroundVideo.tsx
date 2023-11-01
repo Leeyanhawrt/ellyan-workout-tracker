@@ -1,4 +1,5 @@
 import "../assets/stylesheets/components/_BackgroundVideo.scss";
+import Button from "./Button";
 
 interface BackgroundVideoProps {
   video: string;
@@ -37,15 +38,14 @@ const BackgroundVideo: React.FC<BackgroundVideoProps> = ({
 
   const getStarted = (
     <div id="get-started">
-      <button>Register</button>
-      <button>Log In</button>
+      <Button primary>Register</Button>
     </div>
   );
 
   const backgroundText = (
     <div className="header">
       {header && <h1>{spanLetters || header}</h1>}
-      {subheader && <p>{subheader}</p>}
+      {subheader && <p className="u-margin-bottom-medium">{subheader}</p>}
       {cta_buttons && getStarted}
     </div>
   );
