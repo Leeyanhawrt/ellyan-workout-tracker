@@ -19,7 +19,7 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
         <h4 className={headingColor}>{title}</h4>
         <p>{details}</p>
       </div>
-      <div className="icon-container">{icon}</div>
+      <div className={`icon-container ${headingColor}`}>{icon}</div>
     </li>
   );
 };
