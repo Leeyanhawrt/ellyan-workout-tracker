@@ -1,8 +1,5 @@
 {
   "dependencies": {
-    "classnames": "^2.3.2",
-    "i": "^0.3.7",
-    "npm": "^10.2.2",
-    "react-icons": "^4.11.0"
+    "npm": "^10.2.2"
   }
 }
