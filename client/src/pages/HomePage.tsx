@@ -28,6 +28,7 @@ const HomePage = () => {
         </div>
         <FeaturesList />
       </section>
+      <section id="testimonials-section"></section>
     </>
   );
 };
