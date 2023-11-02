@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS testimonials CASCADE;
 
-CREATE TABLE users(
+CREATE TABLE testimonials(
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(255) NOT NULL,
   last_name VARCHAR(255) NOT NULL,
