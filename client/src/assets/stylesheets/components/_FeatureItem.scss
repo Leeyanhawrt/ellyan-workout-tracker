@@ -1,5 +1,4 @@
 .feature-item {
-  border: 1px solid #ccc;
   border-radius: 0.5rem;
   padding: 1rem;
   list-style: none;
@@ -9,6 +8,8 @@
   align-items: center;
   padding: 1.1rem;
   width: 100%;
+  transition: all 0.3s;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 
   h4 {
     margin: 2rem 0;
@@ -26,5 +27,9 @@
       height: 100px;
       width: 100px;
     }
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
   }
 }

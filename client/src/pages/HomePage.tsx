@@ -19,7 +19,7 @@ const HomePage = () => {
         flipAnimation
         cta_buttons
       />
-      <div className="content-container">
+      <section id="features-section" className="content-container">
         <div className="app-features u-margin-top-medium u-margin-bottom-medium">
           <h2>
             <span>{t("appFeatures")}</span>
@@ -27,7 +27,7 @@ const HomePage = () => {
           <p className="u-margin-top-tiny">{t("appFeatureP")}</p>
         </div>
         <FeaturesList />
-      </div>
+      </section>
     </>
   );
 };
