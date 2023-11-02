@@ -4,12 +4,4 @@
 .app-features {
   @include flexCenter;
   flex-direction: column;
-
-  span {
-    color: $color-secondary;
-  }
-
-  p {
-    color: $color-secondary-light;
-  }
 }

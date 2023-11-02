@@ -1,15 +1,27 @@
+@import "../abstracts/variables";
+
 .u-center-text {
   text-align: center !important;
+}
+
+.u-margin-bottom-tiny {
+  margin-bottom: 0.75rem !important;
 }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important;
 }
+
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
 }
+
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+}
+
+.u-margin-top-tiny {
+  margin-top: 0.75rem !important;
 }
 
 .u-margin-top-small {
@@ -25,4 +37,16 @@
 }
 .u-margin-top-huge {
   margin-top: 10rem !important;
+}
+
+.primary {
+  color: $color-primary;
+}
+
+.secondary {
+  color: $color-secondary;
+}
+
+.tertiary {
+  color: $color-tertiary;
 }

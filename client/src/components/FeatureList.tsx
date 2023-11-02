@@ -1,6 +1,8 @@
 import FeatureItem from "./FeatureItem";
 import { useTranslation } from "react-i18next";
-import { GoCalendar, GoGraph, GoRepo } from "react-icons/go";
+import { BsGraphUp } from "react-icons/bs";
+import { RiGitRepositoryFill } from "react-icons/ri";
+import { IoCalendarSharp } from "react-icons/io5";
 import "../assets/stylesheets/components/_FeatureList.scss";
 
 interface FeatureListProps {}
@@ -11,17 +13,20 @@ const FeatureList: React.FC<FeatureListProps> = ({}) => {
     {
       title: t("featureOneTitle"),
       details: t("featureOneDetails"),
-      icon: <GoGraph />,
+      icon: <BsGraphUp />,
+      headingColor: "primary",
     },
     {
       title: t("featureTwoTitle"),
       details: t("featureTwoDetails"),
-      icon: <GoCalendar />,
+      icon: <IoCalendarSharp />,
+      headingColor: "secondary",
     },
     {
       title: t("featureThreeTitle"),
       details: t("featureThreeDetails"),
-      icon: <GoRepo />,
+      icon: <RiGitRepositoryFill />,
+      headingColor: "tertiary",
     },
   ];
 
@@ -32,6 +37,7 @@ const FeatureList: React.FC<FeatureListProps> = ({}) => {
         title={feature.title}
         details={feature.details}
         icon={feature.icon}
+        headingColor={feature.headingColor}
       />
     );
   });

@@ -19,13 +19,15 @@ const HomePage = () => {
         flipAnimation
         cta_buttons
       />
-      <div className="app-features u-margin-top-medium">
-        <h2>
-          <span className="caveat-700 caveat ">{t("appFeatures")}</span>
-        </h2>
-        <p>{t("appFeatureP")}</p>
+      <div className="content-container">
+        <div className="app-features u-margin-top-medium u-margin-bottom-medium">
+          <h2>
+            <span>{t("appFeatures")}</span>
+          </h2>
+          <p className="u-margin-top-tiny">{t("appFeatureP")}</p>
+        </div>
+        <FeaturesList />
       </div>
-      <FeaturesList />
     </>
   );
 };

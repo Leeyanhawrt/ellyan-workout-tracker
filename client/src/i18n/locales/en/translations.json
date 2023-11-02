@@ -10,11 +10,11 @@
   "components": {
     "featureList": {
       "featureOneTitle": "Progress Graphs",
-      "featureOneDetails": "These graphs offer a dynamic representation of your fitness journey, and they can be displayed across various timelines, including weekly, monthly, and yearly intervals.",
+      "featureOneDetails": "Dynamic representation of your fitness journey, they can be displayed across various timelines, including weekly, monthly, and yearly intervals.",
       "featureTwoTitle": "Workout Preview",
       "featureTwoDetails": "View a comprehensive overview of your weekly workouts at a glance, with each day's focus and planned exercises laid out for you.",
-      "featureThreeTitle": "Exercise Recommendations",
-      "featureThreeDetails": "Enjoy the freedom to switch up your routine regularly. With a wide range of exercises at your fingertips"
+      "featureThreeTitle": "Exercise Tips",
+      "featureThreeDetails": "Enjoy the freedom to switch up your routine regularly. A wide range of muscle group recommended exercises are available to you at your fingertips"
     }
   }
 }
