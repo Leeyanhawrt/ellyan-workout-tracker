@@ -1,5 +1,6 @@
 import BackgroundVideo from "../components/BackgroundVideo";
 import FeaturesList from "../components/FeatureList";
+import TestimonialList from "../components/TestimonialList";
 import paddling_video from "../assets/videos/ndrc-paddling.mp4";
 import "../assets/stylesheets/pages/_p_home.scss";
 import { useTranslation } from "react-i18next";
@@ -28,7 +29,9 @@ const HomePage = () => {
         </div>
         <FeaturesList />
       </section>
-      <section id="testimonials-section"></section>
+      <section id="testimonials-section">
+        <TestimonialList />
+      </section>
     </>
   );
 };
