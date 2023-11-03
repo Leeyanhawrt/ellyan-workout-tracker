@@ -14,8 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Resource Routes
 const profileRoutes = require("./routes/users");
+const testimonialRoutes = require("./routes/testimonials");
 
 // Resource Mounting
 app.use("/user", profileRoutes(pool));
+app.use("/testimonial", testimonialRoutes(pool));
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
