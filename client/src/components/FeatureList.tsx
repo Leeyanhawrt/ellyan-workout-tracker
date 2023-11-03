@@ -31,15 +31,7 @@ const FeatureList: React.FC<FeatureListProps> = ({}) => {
   ];
 
   const featureItems = featuresData.map((feature) => {
-    return (
-      <FeatureItem
-        key={feature.title}
-        title={feature.title}
-        details={feature.details}
-        icon={feature.icon}
-        headingColor={feature.headingColor}
-      />
-    );
+    return <FeatureItem key={feature.title} {...feature} />;
   });
 
   return <ul id="features-container">{featureItems}</ul>;
