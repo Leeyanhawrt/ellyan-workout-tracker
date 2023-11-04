@@ -39,7 +39,7 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
         <p className="testimonial-author">{`${first_name} ${last_name}`}</p>
       </div>
       <div className="testimonial-text">
-        <h3>{title}</h3>
+        <h3 className="u-margin-bottom-tiny">{title}</h3>
         <p>{review_description}</p>
       </div>
     </div>
