@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../assets/stylesheets/components/_TestimonialItem.scss";
 
 interface TestimonialItemProps {
   first_name: string;
@@ -29,20 +30,18 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
   importTestimonialImage();
 
   return (
-    <>
+    <div className="testimonial">
       <div className="testimonial-image">
         <img
           src={testimonialImage}
           alt={`Testimonial ${first_name} ${last_name}`}
         />
       </div>
-      // {first_name}
-      // {last_name}
-      // {title}
-      // {review_description}
-      // {profile_image_path}
-      <div className="testimonial-text"></div>
-    </>
+      <div className="testimonial-text">
+        <h3>{title}</h3>
+        <p>{review_description}</p>
+      </div>
+    </div>
   );
 };
 

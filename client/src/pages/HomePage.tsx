@@ -32,7 +32,7 @@ const HomePage = () => {
       </section>
       <section id="testimonials-section">
         <div className="background-image"></div>
-        <h2 className="u-center-text u-padding-top-medium">
+        <h2 className="u-center-text u-padding-top-medium u-margin-bottom-medium">
           {t("testimonialHeader")}
         </h2>
         <TestimonialList />
