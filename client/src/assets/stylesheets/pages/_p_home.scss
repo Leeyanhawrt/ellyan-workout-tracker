@@ -7,7 +7,24 @@
 }
 
 #testimonials-section {
-  background-image: url(../../photos/backgrounds/powerlifting-gym.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: 500px;
+  position: relative;
+
+  .background-image {
+    background-image: url(../../photos/backgrounds/powerlifting-gym.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  h2 {
+    color: $color-black;
+  }
 }

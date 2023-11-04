@@ -20,16 +20,21 @@ const HomePage = () => {
         flipAnimation
         cta_buttons
       />
-      <section id="features-section" className="content-container">
+      <section
+        id="features-section"
+        className="content-container u-margin-bottom-medium"
+      >
         <div className="app-features u-margin-top-medium u-margin-bottom-medium">
-          <h2>
-            <span>{t("appFeatures")}</span>
-          </h2>
+          <h2>{t("appFeatures")}</h2>
           <p className="u-margin-top-tiny">{t("appFeatureP")}</p>
         </div>
         <FeaturesList />
       </section>
       <section id="testimonials-section">
+        <div className="background-image"></div>
+        <h2 className="u-center-text u-padding-top-medium">
+          {t("testimonialHeader")}
+        </h2>
         <TestimonialList />
       </section>
     </>

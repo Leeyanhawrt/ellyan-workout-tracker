@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import TestimonialItem from "./TestimonialItem";
+import "../assets/stylesheets/components/_TestimonialList.scss";
 
 interface TestimonalInterface {
   id: number;
