@@ -13,10 +13,19 @@
   padding-left: 7rem;
   width: 60%;
   gap: 3%;
-  margin: 0 auto;
 
   & > div {
     transform: skewX(12deg);
+  }
+
+  &:hover &-image img {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+
+  &:hover &-author {
+    opacity: 1;
+    top: 30%;
   }
 
   &-image {
@@ -24,10 +33,26 @@
     height: 15rem;
     clip-path: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
+    position: relative;
 
     img {
       height: 100%;
+      transform: scale(1.1);
     }
+  }
+
+  &-author {
+    font-weight: 500;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    transform: translate(-50%, 20%);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    opacity: 0;
   }
 
   &-text {

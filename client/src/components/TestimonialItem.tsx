@@ -36,6 +36,7 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
           src={testimonialImage}
           alt={`Testimonial ${first_name} ${last_name}`}
         />
+        <p className="testimonial-author">{`${first_name} ${last_name}`}</p>
       </div>
       <div className="testimonial-text">
         <h3>{title}</h3>
