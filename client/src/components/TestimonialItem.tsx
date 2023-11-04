@@ -30,7 +30,7 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
   importTestimonialImage();
 
   return (
-    <div className="testimonial">
+    <div className="testimonial u-margin-bottom-medium">
       <div className="testimonial-image">
         <img
           src={testimonialImage}
